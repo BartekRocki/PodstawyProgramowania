@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    //zad1
+    /*printf("nie spodziewalas sie mnie tak wczesnie");*/
+    //zad2
+    /*//printf("nie spodziewalas sie mnie tak wczesnie");
+    int a;*/
+    //zad3
+    /*int a,b;
+    float dz;
+    int d,o,m,mod;
+    a=3;
+    b=2;
+    d=a+b;
+    o=a-b;
+    m=a*b;
+    dz=((1.0*a)/(1.0*b));
+    mod=a%b;
+    printf("\n%d+%d=%d\n",a,b,d);
+    printf("%d-%d=%d\n",a,b,o);
+    printf("%d*%d=%d\n",a,b,m);
+    printf("%d/%d=%f\n",a,b,dz);
+    printf("%dmod%d=%d\n",a,b,mod);*/
+    //zad4 
+    /*int a,x,b,y;
+    printf("podaj 3 wartosci\n");
+    scanf("%d%d%d",&a,&x,&b);
+    y=(a*x)+b;
+    printf ("wynik to :%d",y);*/
+    //zad5 
+    /*char a,b,c,d;
+    printf ("podaj 4 litery\n");
+    scanf("%c\n%c\n%c\n%c",&a,&b,&c,&d);
+    printf("%c%c%c%c\n",a,b,c,d); */
+    //zad6 
+   /* int a,h;
+    float pole;
+    a=4;
+    h=3;
+    pole=a*h*0.5;
+    printf("pole wynosi:%f",pole);*/
+  //zad7 
+  /*int a,b,c;
+  printf ("podaj 3 wartosci");
+  scanf("%d%d%d",&a,&b,&c);
+  float wynik;
+  wynik=3.0/((1.0/a)+(1.0/b)+(1.0/c));
+  printf("%f",wynik);*/
+  //zad8 Napisz program, który wczyta ze standardowego wejścia trzy liczby zmiennoprzecinkowe będące długościami krawędzi prostopadłościanu wychodzących z jednego wierzchołka i wypisze na ekran jego objętość.
+  int e1,e2,e3;
+  float a1,a2,a3;
+  a1=1.2;
+  a2=1.5;
+  a3=3.0;
+  e1=3;
+  e2=3;
+  e3=3;
+  float objetosc;
+  objetosc=a1*a2*a3;
+  printf("objetosc to %f e=%d",objetosc,e1);
+  
+  system("PAUSE");	
+  return 0;
+}
