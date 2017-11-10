@@ -98,14 +98,17 @@ return true;
     fputs(napis3,stdout);
 }*///npiasz program ktury wczyta od uzytkownika ciag znakow i policzmy sume kwadratow litererk
 //sprawdz czy dany tekst jest palidronem
-
+// napisz funkcje która przyjmuje nazwisko i imie
 int main()
 {
     char a[30];
     fgets(a,30,stdin);
-    int i,j;
-    j=strlen(a);
-    if ()
+    int x=strlen(a);
+    int i;
+    for (i=0;i<x;i++){
+        if (a[i]==' ')break;}
+    if (a[i-1]=='a')printf("jest to kobieta ");
+    else printf("to jest facet");
     /*int suma=0;
     for (i=0;i<strlen(napis1);i++){
         suma=suma+(napis1[i]*napis1[i]);}
