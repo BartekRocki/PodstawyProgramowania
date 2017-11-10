@@ -1,135 +1,205 @@
 #include<stdio.h>
 #include<math.h>
-/*float trojkat(float a, float b){
-    float pole;
-    pole=(a*b)/2.0;
-    return pole;
-}*/
-/*void dzielniki(){
-    int a,i=1;
-    printf("Podaj liczbe\n");
-    scanf("%d",&a);
-    while(i<=a)
-    {if (a%i==0){printf("%d\t",i);
-        i++;}
-    else i++;
-    }*/
-/*int suma (n){
-    int suma=0 , i;
-    for (i=1;i<=n;i++){
-        if (i%2==1)suma=suma+i;
+#include<stdbool.h>//biblioteka potrzebna do funkcji bool
+#include<stdlib.h>//rand
+#include<time.h>//srand(time(NULL))
+#include<string.h>//teksty
+//char napis[30]
+/*gets(napis);//możliwość wejscia na inne partycje 
+ fgets(napis,30,stdin);//pobiera do 30 znaków
+ scanf("%s",&napis);//pobiera napis
+ fputs(napis,stdout);/wypisuje dany napis
+ printf(napis);//wyisuje dany napis 
+ 
+
+/*int dec2bin(int a){
+    int x=0;
+    while (a>0){
+        if (a%2==0){ x=x+1;}
+        a=a/2;
+    
     }
+    return x;
+}*///zad4
+/*bool suma(int tab[],int rozmiar){
+int i,suma=0;
+for (i=0;i<rozmiar;i++){
+    suma=suma+(tab[i]*tab[i]);}
+    if (suma>30){return true;}
+    else return false;
+}*/
+
+//zad 3
+    /*int suma(int tab[],int rozmiar){
+    int i,suma=0;
+    for (i=0;i<rozmiar;i++){
+        suma=suma+tab[i];}
     return suma;
-}
-void zad4(int a){
+}*/
+//zad 6
+/*void zad6 (int tab1[],int tab2[],int tab3[],int n){
     int i;
-    for(i=1;i<=a;i++){
-        if (i%2==1)printf("%d\n",i*i);
-    }
-
-int fib(int a,int b){
-    if(a==0)return 0;
-    else if (a==1) return 1;
-    else return fib(a-1)+fib(a-2);}*/
-    
-    /*int zad6(int a,int b){
-        if(b==0)return 1;
-        else return zad6(a,b-1)*a;
+    int tab1[2*n],tab2[],tab3[];
+    int i;
+    for(i=0;i<n;i++){
+        if (i%2==0)tab1[i]=tab2[i/2];}
+    else tab1[i]=tab3[i/2];
     }*/
-/*int zad7(int a){
-    if (a<=0||a==10)return 0;
-    else return 2*zad7(a-1)+zad7(a-2)+5;
-
-}*/
-    
-/*int zad8(int n){
-    if (n==0)return 1;
-    else return zad8(n-1)*n;
-}*/
-
-/*int zad9(int a){
-    if (a==0) return 1;
-    else if (a%2==0) return (a*a)-5;
-    else return (a*a);
-}*/
-    
-/*//POWTORZENIE
-//zad1
-int pierwiastek(float i){
-    int i ;
-    for (i=1;i*i=<a;i++){}
-    return i-1;
-}
-//zad3
-float wspulzednie(float a,float b,float c,int d){
-    return sqrt(((a*c)*(a*c))+((b*d)*(b*d)));
-}
-//zad 4
-int zad4(int a,int b){
-    return (a+b)-(max (a,b));
-}
-//zad 19
-int a(int n){
-    int i,s=0;
-    if (n<6) return n;
-    else for(i=1;i=<3;i++){
-        s=s+a(n-2*i);
-    }
-    return s;
-    */
-    
-//zad 17
-/*int zad17(int a){
-    int b,c=0;
-    do {
-        b=a%10;
-        a=a/10;
-        if(b%3==0)b++;
-    }
-    while (a>0)
-        return b;
-    
-    
-}*/
-//zad 14
-/*int zad14 (float a,float b){
-    int x,y;
-    x=a;
-    y=b;
-    if (x-a==y=b)returt 1;
-    else return 0;
-}*/
-//zad
-    int main()
-{
-    
-    //zad 18
-    /*int i ;
-    scanf("%d",n);
-    int i;
+//zad 7
+/*int max (int tab1[],int n){
+    int max,i;
     for (i=0;i<n;i++){
-        int a ;
-        scanf("%d",&a);
-        printf("%d",a);
+        if (i==0)max=tab1[0];
+        else if (tab1[i]>max)max=tab1[i];            }
+    return max;
+}*/
+//zad8
+/*bool szukaj(int tab[],int n,int szukana){
+    int i;S
+    for(i=0;i<10;i++){
+        if (tab[i]==szukana)return true;}
+    return false;
+        
+}*/
+/*int dlugosctekstu(char napis[]){
+ int i;
+ for(i=0;napis[i];i++);
+ return i-1;
+}
+bool podobnewyrazy(char tab1[],char tab2[]){
+    int a=dlugosctekstu(tab1);
+    int i,j=a-1;
+    for(i=0;i<a;i++){
+        if (tab1[i]!=tab2[j])return false;
+        j--;
     }
+return true;
+}
+*/
+//napisz funkcje która poruwnuje 2 napisu czy sa takei same
+/*bool takiesame(char tab[],char tab2[]){
+    int i;
+    for(i=0;i<strlen(tab);i++){
+        if (tab[i]!=tab2[i])return false;}
+    return true;
+}*/
+//napisz funkjce ktura przyjmuje napis i zmienia je w duze litery
+//napisz funkcje ktura przyjmuje 2 napisy ruznych dlugosci
+/*void funkcja(char napis1[],char napis2[]){
+    int rozmiar=strlen(napis1)+strlen(napis2);
+    char napis3[rozmiar];
+    int i ;
+    for (i=0;i<strlen(napis1);i++)
+    {napis3[i]=napis1[i];}
+    int j=0;
+    for (;i<rozmiar;i++){napis3[i]=napis2[j];
+        j++;
+    }
+    fputs(napis3,stdout);
+}*///npiasz program ktury wczyta od uzytkownika ciag znakow i policzmy sume kwadratow litererk
+//sprawdz czy dany tekst jest palidronem
+
+int main()
+{
+    char a[30];
+    fgets(a,30,stdin);
+    int i,j;
+    j=strlen(a);
+    if ()
+    /*int suma=0;
+    for (i=0;i<strlen(napis1);i++){
+        suma=suma+(napis1[i]*napis1[i]);}
+    printf("%d",suma);
     */
+    //funkcja(napis1,napis2);
+    /*int i=0;
+    printf("%s\n",napis);
+    for (;i<strlen(napis);i++){
+        if (napis[i]>=97 && napis[i]<=122)napis[i]=napis[i]-32;
+    }
+    printf("%s\n",napis);*/
     
-    /*float a,b;
-    printf ("podaj podstawe \n");
-    scanf("%f \n",&a);
-    printf ("podaj wysokosc \n");
-    scanf("%f \n",&b);
-    printf("%f\n",trojkat(a,b));*/
-   // printf("%d\n",suma(16));
-    /*int a;
-    printf("podaj wartosci \n");
-    scanf("%d",&a);
-    //zad4(a);
-    //printf("%d",fib(a));
-   // printf("%d",zad6(a,b));
-    //printf("%d",zad7(a));
-    //printf("%d"zad8(a));
-    //printf("%d",zad9(a));*/
+    /*char napis[15];
+     char napis2[15];
+     fgets(napis,15,stdin);
+     fgets(napis2,15,stdin);
+    printf(podobnewyrazy(napis,napis2)?"tak":"nie");*/
+   /* char tab[15];
+    fgets(tab,15,stdin);
+    printf("%d",dlugosctekstu(tab));*/
+    // funkcja przyjmuje 2 napisy i sprawdza czy te napiy są takie same
+    
+    //napisz program któr wczyta tekst na  3 rużne sposoby
+    /*char tab[15];
+    gets (tab);
+    puts(tab);
+    fgets(tab,15,stdin);
+    fputs(tab,stdout);
+    scanf("%s",tab);
+    printf("%s",tab);*/
+    
+    //zad8
+    /*int tab[10];
+    int i;
+    int szukana;
+    srand(time(NULL));
+    while (i<10){
+        szukana=rand()%10;
+        printf("%d\n",szukana);
+        if (!szukaj(tab,i,szukana)){tab[i]=szukana;
+            i++;}
+        else{ printf("ta wartosc jest juz podana \n");
+            int j;
+            for (j=0;j<i;j++){
+                printf("%d",tab[j])
+                printf()
+            }
+        }
+    
+    }*/
+    
+    
+    //zad 7
+    /*int tab1[5]={1,12,2,5,3};
+    printf("%d\n",max(tab1,5));*/
+    
+    //zad6
+    /*int n=4;
+    int tab1[n*2];
+    int tab2[]={1,2,3,4};
+    int tab3[]={5,6,7,8};
+    zad6(tab1,tab2,tab3,n);
+    int i;
+    for(i=0;i<2*n;i++){
+    printf("%d\n",tab1[i])}*/
+   
+    //zad4
+    /*int tab[5];
+    int i=0;
+    for(i=0;i<5;i++){
+        scanf("%d",& tab[i]);
+    }
+    bool potega=suma(tab,5);
+    if (potega==true)printf("liczba jest wieksza od 30 ");
+    else printf("liczba jest mniejsza od 30 ");*/
+    
+    //zad 3
+    /*int i;
+    int tab[5];
+    for(i=0;i<5;i++){
+        scanf("%d",& tab[i]);
+    }
+    printf("suma to %d\n",suma(tab,5));*/
+    
+    /*int n;
+    printf("podaj wartosc do przeksztalcenia na liczbe binarna \n");
+    scanf("%d",&n);
+    int tab[4],i=3;
+    while (n>0){
+        tab[i]=n%2;
+        n=n/2;
+        i=i-1;    }*/
+   
     return 0;
     
 }
